@@ -35,7 +35,18 @@ h5 {
     color: #143963;
 }
 
+.sampleData ::placeholder{
+    color: #f16b20;
+}
+
 .sampleData input[type=text]{
     color: #f16b20;
 }
 
+.sampleData .form-select{
+    color: #f16b20;
+}
+
+.sampleData input[type=date]{
+    color: #f16b20;
+}
