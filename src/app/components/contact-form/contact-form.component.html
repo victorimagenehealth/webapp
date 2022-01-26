@@ -1,55 +1,78 @@
 <section class="sampleData">
-    <h1>Please Enter the Information Required</h1>
+    <h4>Por favor, tómese su tiempo para llenar el siguiente formulario para el envío de muestra.</h4>
+    <br>
+
     <div class="sampleData">
         <label for="kit_code" class="form-label">Código del Kit</label>
         <input type="text" class="form-control" id="kit_code" placeholder="Código del Kit"
             [(ngModel)]="sampleData.kitCode" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="doctor_firstName" class="form-label">Nombre del Médico</label>
-        <input type="text" class="form-control" id="doctor_firstName" placeholder="Nombre del Médico"
+        <input type="text" class="form-control" id="doctor_firstName" placeholder="Ej. Juan"
             [(ngModel)]="sampleData.doctor_firstName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="doctor_lastName" class="form-label">Apellido del Médico</label>
-        <input type="text" class="form-control" id="doctor_lastName" placeholder="Apellido del Médico"
+        <input type="text" class="form-control" id="doctor_lastName" placeholder="Ej. Perez"
             [(ngModel)]="sampleData.doctor_lastName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="doctor_email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="doctor_email" placeholder="name@example.com"
+        <input type="email" class="form-control" id="doctor_email" placeholder="juanperez@gmail.com"
             [(ngModel)]="sampleData.doctor_email" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="doctor_cedula" class="form-label">Cédula Profesional del Médico</label>
-        <input type="text" class="form-control" id="doctor_cedula" placeholder="Cédula"
+        <input type="text" class="form-control" id="doctor_cedula" placeholder="Ej. 1456987"
             [(ngModel)]="sampleData.doctor_code" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="doctor_location" class="form-label">Adscripción o Institución a la que Pertenece</label>
-        <input type="text" class="form-control" id="doctor_location" placeholder="Adscripción"
+        <input type="text" class="form-control" id="doctor_location" placeholder="Ej. Instituto de Ciencias Genómicas"
             [(ngModel)]="sampleData.doctor_location" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="pacient_firstName" class="form-label">Nombre del Paciente</label>
-        <input type="text" class="form-control" id="pacient_firstName" placeholder="Nombre Paciente"
+        <input type="text" class="form-control" id="pacient_firstName" placeholder="Ej. Luis"
             [(ngModel)]="sampleData.pacient_firstName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="pacient_lastName" class="form-label">Apellido del Paciente</label>
-        <input type="text" class="form-control" id="pacient_lastName" placeholder="Apellido Paciente"
+        <input type="text" class="form-control" id="pacient_lastName" placeholder="Ej. Sanchez"
             [(ngModel)]="sampleData.pacient_lastName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="medical_file" class="form-label">Expediente Médico</label>
-        <input type="text" class="form-control" id="medical_file" placeholder="Expediente Médico"
-            [(ngModel)]="sampleData.medical_file" required>
+        <input type="text" class="form-control" id="medical_file"
+            placeholder="Introduzca el folio del expediente médico" [(ngModel)]="sampleData.medical_file" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="pacient_file" class="form-label">Cargue el expediente medico en PDF</label>
+        <br>
         <input type="file" class="form-control-file" id="pacient_file" placeholder="Cargue Archivo"
-            [(ngModel)]="sampleData.pacient_file" required>>
+            [(ngModel)]="sampleData.pacient_file" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="pacient_sex" class="form-label">Sexo del Paciente</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.pacient_sex" required>
@@ -58,16 +81,19 @@
             <option value="2">Mujer</option>
         </select>
     </div>
+    <br>
+
     <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
         <label for="pacient_dob" class="for-label">Fecha de Nacimiento del Paciente</label>
         <input type="date" class="form-control" id="pacient_dob" placeholder="Selecciona Fecha"
             [(ngModel)]="sampleData.pacient_dob" required>
         <i class="fas fa-calendar input-prefix" tabindex=0></i>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="diagnosis" class="form-label">Se Diagnostica:</label>
-        <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.diagnosis"
-            required>
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.diagnosis" required>
             <option value="" selected disabled>Seleccione</option>
             <option value="Lung Cancer">Cáncer de Pulmón</option>
             <option value="Ovary Cancer">Cáncer de Ovario</option>
@@ -75,19 +101,25 @@
             <option value="Rectal Cancer">Cáncer Colorrectal</option>
             <option value="Other">Otro, favor de especificar</option>
         </select>
-        <input type="text" class="form-control"  placeholder="Especifíque" *ngIf="sampleData.diagnosis=='Other'" [(ngModel)]="sampleData.diagnosis_other">
+        <input type="text" class="form-control" placeholder="Especifíque" *ngIf="sampleData.diagnosis=='Other'"
+            [(ngModel)]="sampleData.diagnosis_other">
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_type" class="form-label">Tipo de Muestra</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_type" required>
             <option value="" selected disabled>Seleccione</option>
             <option value="Solid">Sólida</option>
             <option value="Plasm">Plasma</option>
-            <option value="Salive">Saliva<option>
+            <option value="Salive">Saliva
+            <option>
         </select>
     </div>
+    <br>
+
     <div class="sampleData">
-        <label for="sample_presentation" class="form-label">Tipo de Muestra</label>
+        <label for="sample_presentation" class="form-label">Presentación de Muestra</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_presentation"
             required>
             <option value="" selected disabled>Seleccione</option>
@@ -98,16 +130,23 @@
             <option value="DNA">ADN Puro</option>
         </select>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_qt" class="form-label">Cantida de Tubos, Laminillas o Bloques</label>
         <input type="text" class="form-control" id="sample_qt" placeholder="Ej. 10 Laminillas"
             [(ngModel)]="sampleData.sample_qt" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_volume" class="form-label">Volumen de Cada Tubo (mL) (Si aplica)</label>
-        <input type="text" class="form-control" id="sample_volume" placeholder="Volumen de Muestra"
-            [(ngModel)]="sampleData.sample_volume" required>
+        <input type="text" class="form-control" id="sample_volume"
+            placeholder="Introduzca el volumen de la muestra de cada Tubo" [(ngModel)]="sampleData.sample_volume"
+            required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_preservation" class="form-label">Método de preservación de la muestra</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_preservation"
@@ -116,13 +155,17 @@
             <option value="Formaldehyde">Formaldehído</option>
             <option value="Paraformaldehyde">Paraformaldehído</option>
             <option value="Cryopreservation">Criopreservación</option>
-          </select>
+        </select>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_site" class="form-label">Tejido y Sitio Anatómico de toma de Muestra</label>
         <input type="text" class="form-control" id="sample_site" placeholder="Ej. Aspirado Médula Ósea"
             [(ngModel)]="sampleData.sample_site" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_genetic_test1" class="form-label">Prueba Génetica</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_genetic_test1"
@@ -135,6 +178,8 @@
             <option value="ImageneScreen">ImageneScreen</option>
         </select>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_genetic_test2" class="form-label">Prueba Génetica 2</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_genetic_test2"
@@ -147,52 +192,74 @@
             <option value="ImageneScreen">ImageneScreen</option>
         </select>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_time" class="form-label">Tiempo Transcurrido desde el Diagnóstico Inicial (en meses)</label>
         <input type="text" class="form-control" id="sample_time" placeholder="Ej. 2 Meses"
             [(ngModel)]="sampleData.sample_time" required>
     </div>
+    <br>
+
     <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
         <label for="sample_date" class="for-label">Fecha de toma de la biopsia</label>
         <input type="date" class="form-control" id="sample_date" placeholder="Selecciona Fecha"
             [(ngModel)]="sampleData.sample_date" required>
         <i class="fas fa-calendar input-prefix" tabindex=0></i>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_firstName" class="form-label">Nombre del Patólogo</label>
-        <input type="text" class="form-control" id="patho_firstName" placeholder="Nombre del Médico"
+        <input type="text" class="form-control" id="patho_firstName" placeholder="Ej. Ana"
             [(ngModel)]="sampleData.patho_firstName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_lastName" class="form-label">Apellido del Patólogo</label>
-        <input type="text" class="form-control" id="patho_lastName" placeholder="Apellido del Médico"
+        <input type="text" class="form-control" id="patho_lastName" placeholder="Ej. García"
             [(ngModel)]="sampleData.patho_lastName" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_id" class="form-label">ID de Patología</label>
         <input type="text" class="form-control" id="patho_id" placeholder="Ej. 12345R" [(ngModel)]="sampleData.patho_id"
             required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_phone" class="form-label">Teléfono del Laboratorio</label>
         <input type="text" class="form-control" id="patho_phone" placeholder="Ej. 8182620000"
             [(ngModel)]="sampleData.patho_phone" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_ext" class="form-label">Extensión del Laboratorio</label>
         <input type="text" class="form-control" id="patho_ext" placeholder="Ej. 12345"
             [(ngModel)]="sampleData.patho_ext" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="patho_report" class="form-label">Cargue el reporte histopatólogico en formato PDF</label>
+        <br>
         <input type="file" class="form-control-file" id="patho_report" placeholder="Cargue Archivo"
-            [(ngModel)]="sampleData.patho_report" required>>
+            [(ngModel)]="sampleData.patho_report" required>
     </div>
+    <br>
+
     <div class="sampleData">
-        <label for="patho_img" class="form-label">Cargue el Imagenes H&E, sí las hay</label>
+        <label for="patho_img" class="form-label">Cargue Imagenes H&E, si las hay</label>
+        <br>
         <input type="file" class="form-control-file" id="patho_img" placeholder="Cargue Archivo"
-            [(ngModel)]="sampleData.patho_img" required>>
+            [(ngModel)]="sampleData.patho_img" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_location" class="form-label">La muestra se ecuentra en Monterrey, Nuevo León?</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="sampleData.sample_location"
@@ -202,38 +269,57 @@
             <option value="No">No</option>
         </select>
     </div>
+    <br>
+
     <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
         <label for="sample_colection" class="for-label">Fecha de recolección</label>
         <input type="date" class="form-control" id="sample_colection" placeholder="Seleccione Fecha"
             [(ngModel)]="sampleData.sample_colection" required>
         <i class="fas fa-calendar input-prefix" tabindex=0></i>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_adress" class="form-label">Dirección de Recolección (Calle, Número Int. y Ext.)</label>
         <input type="text" class="form-control" id="sample_adress" placeholder="Ej. Av. Principal #31 Int. 310"
             [(ngModel)]="sampleData.sample_adress" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_neighborhood" class="form-label">Colonia</label>
         <input type="text" class="form-control" id="sample_neighborhood" placeholder="Ej. Ladrillera"
             [(ngModel)]="sampleData.sample_neighborhood" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_city" class="form-label">Ciudad y Estado</label>
         <input type="text" class="form-control" id="sample_city" placeholder="Ej. Monterrey, Nuevo León"
             [(ngModel)]="sampleData.sample_city" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_postal" class="form-label">Código Postal</label>
         <input type="text" class="form-control" id="sample_postal" placeholder="Ej. 64000"
             [(ngModel)]="sampleData.sample_postal" required>
     </div>
+    <br>
+
     <div class="sampleData">
         <label for="sample_add" class="form-label">Comentarios o Información Adicional</label>
         <input type="text" class="form-control" id="sample_add" placeholder="Ej. 64000"
             [(ngModel)]="sampleData.sample_add" required>
     </div>
+    <br>
 
+    <br>
+    <app-signpad></app-signpad>
+    <br>
 
-    <button type="button" class="btn btn-primary" (click)="sendData()">Enviar</button>
+    <div class="sendButton">
+        <button type="button" class="btn btn-success" (click)="sendData()">Enviar Información</button>
+    </div>
+    <br>
 </section>
