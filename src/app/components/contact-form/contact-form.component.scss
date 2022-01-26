@@ -15,7 +15,6 @@ h5 {
     width: 80%;
     color: #143963;
     text-align: center;
-
 }
 
 #date-picker-example{
@@ -35,18 +34,22 @@ h5 {
     color: #143963;
 }
 
-.sampleData ::placeholder{
+.sampleData ::placeholder {
+    color: #f16d2086;
+}
+
+.sampleData input[type=text] {
     color: #f16b20;
 }
 
-.sampleData input[type=text]{
+.sampleData input[type=email] {
     color: #f16b20;
 }
 
-.sampleData .form-select{
-    color: #f16b20;
+.sampleData .form-select {
+    color: #f16d2086;
 }
 
-.sampleData input[type=date]{
-    color: #f16b20;
+.sampleData input[type=date] {
+    color: #f16d2086;
 }
