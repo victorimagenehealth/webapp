@@ -7,11 +7,15 @@
 .signature-pad {
     margin: auto;
     width: 80%;
-    border: 2px solid black;
+    border: 1px solid #143963;
+    border-radius: 5px;
 }
 
-.signature .container-fluid .row .col-6 button {
+.signature .container-fluid .row .col-12 button {
     margin: auto;
-    width: 100%;
-    border: 2px solid black;
+    margin-top: 5px;
+    width: 20%;
+    border: 2px solid #f16b20;
+    background-color: #f16b20;
+    color: #143963;
 }
