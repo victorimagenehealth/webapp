@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import { FormsService } from 'src/app/services/forms.service';
 
-interface SampleData{
+interface SampleData {
   kitCode: string,
   doctor_firstName: string,
   doctor_lastName: string,
@@ -14,7 +15,7 @@ interface SampleData{
   pacient_sex: string,
   pacient_dob: string,
   diagnosis: string,
-  diagnosis_other:string,
+  diagnosis_other: string,
   sample_type: string,
   sample_presentation: string,
   sample_qt: string,
@@ -61,45 +62,53 @@ export class ContactFormComponent implements OnInit {
     pacient_file: '',
     pacient_sex: '',
     pacient_dob: '',
-    diagnosis:'',
+    diagnosis: '',
     diagnosis_other: '',
-    sample_type:'',
-    sample_presentation:'',
-    sample_qt:'',
-    sample_volume:'',
-    sample_preservation:'',
-    sample_site:'',
-    sample_genetic_test1:'',
-    sample_genetic_test2:'',
-    sample_time:'',
-    sample_date:'',
-    patho_firstName:'',
-    patho_lastName:'',
-    patho_id:'',
-    patho_phone:'',
-    patho_ext:'',
-    patho_report:'',
-    patho_img:'',
-    sample_location:'',
-    sample_colection:'',
-    sample_adress:'',
-    sample_neighborhood:'',
-    sample_city:'',
-    sample_postal:'',
-    sample_add:'',
+    sample_type: '',
+    sample_presentation: '',
+    sample_qt: '',
+    sample_volume: '',
+    sample_preservation: '',
+    sample_site: '',
+    sample_genetic_test1: '',
+    sample_genetic_test2: '',
+    sample_time: '',
+    sample_date: '',
+    patho_firstName: '',
+    patho_lastName: '',
+    patho_id: '',
+    patho_phone: '',
+    patho_ext: '',
+    patho_report: '',
+    patho_img: '',
+    sample_location: '',
+    sample_colection: '',
+    sample_adress: '',
+    sample_neighborhood: '',
+    sample_city: '',
+    sample_postal: '',
+    sample_add: '',
   }
 
-  constructor() { }
+  constructor(private _sendForms: FormsService) { }
 
   ngOnInit(): void {
     //llama a al abase datos 
     //sample data llenalo con lo que respondio la db 
   }
 
-  sendData(){
+  sendData() {
+
+    console.log(this.sampleData)
+
+    let sampleData2 = Object.assign({}, this.sampleData);
+
+    this._sendForms.sendForm(this.sampleData).subscribe((resolve) => {
+      console.log("esta es la respuesta del back",resolve)
+    })
+
     //crear un bvalidador de datos 
     //crear un http request para enviar el json al back o al python 
-    console.log(this.sampleData)
     //redirigirte a una sigiente pagina "exito al guardar"
   }
 
